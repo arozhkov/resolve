@@ -27,7 +27,7 @@ angular
         controller: 'MainCtrl',
         resolve: {
           resolvedData: function(Restangular){
-              return Restangular.one('dict').get().then(function (data) {
+              return Restangular.one('dictX').get().then(function (data) {
                 var successData = {'success': true, 'data': data};
                 return successData; // resolvedData will be resolved with the successData
               }, function () {

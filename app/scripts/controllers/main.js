@@ -15,7 +15,7 @@ angular.module('resolveApp')
     $log.info('RESOLVED DATA ' + resolvedData.success);
 
     if (resolvedData.success) {
-      $log.info(resolvedData.data);
+      $log.info(resolvedData.data.plain());
     }
     
 
