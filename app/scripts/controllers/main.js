@@ -8,15 +8,16 @@
  * Controller of the resolveApp
  */
 angular.module('resolveApp')
-  .controller('MainCtrl', ['$scope', '$log', 'resolvedData', function ($scope, $log, resolvedData) {
+  .controller('MainCtrl', ['$scope', '$log', 'resolvedDict', function ($scope, $log, resolvedDict) {
     
     $scope.test = 'test value';
+    $scope.dict = {};
 
-    $log.info('RESOLVED DATA ' + resolvedData.success);
+    $log.info('RESOLVED DATA ' + resolvedDict.success);
 
-    if (resolvedData.success) {
-      $log.info(resolvedData.data.plain());
+    if (resolvedDict.success) {
+      $scope.dict = resolvedDict.data.plain();
+      $log.info($scope.dict);
     }
     
-
   }]);
